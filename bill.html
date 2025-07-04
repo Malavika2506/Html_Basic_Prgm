@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bill</title>
+    <style>
+        /* Make rows red when hovered, except the header row */
+        table tr:hover:not(:first-child) {
+            background-color: red;
+            color: white; /* Optional: makes text readable on red background */
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Grocery items Bill</h2>
+    <table border="1" align="center" width="60%" cellspacing="0">
+        <tr bgcolor="Green" align="center">
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr align="center">
+            <td>Potatoes</td>
+            <td>51</td>
+            <td>$1.00</td>
+        </tr>
+        <tr align="center">
+            <td>Nuts</td>
+            <td>20</td>
+            <td>$3.00</td>
+        </tr>
+        <tr align="center">
+            <td>Onions</td>
+            <td>4</td>
+            <td>$3.00</td>
+        </tr>
+        <tr align="center">
+            <td>Very long awkwardly named yet still delicious item here</td>
+            <td>4</td>
+            <td>$3.00</td>
+        </tr>
+        <tr align="center">
+            <td>Carrots</td>
+            <td>12</td>
+            <td>$2.99</td>
+        </tr>
+        <tr align="center" >
+            <td colspan="2"><b>Total Price</b></td>
+            <td>$33.79</td>
+        </tr>
+    </table>
+</body>
+</html>
