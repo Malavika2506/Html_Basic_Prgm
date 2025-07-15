@@ -2,9 +2,10 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow-y: scroll; /* Always show vertical scrollbar */
-    }
+    overflow-x: hidden;
+}
 
-.navbar {
+.nav-bar {
     background-color: #222;
     color: #fff;
     display: flex;
@@ -12,6 +13,7 @@ body {
     align-items: center;
     padding: 20px 50px;
 }
+
 
 .logo {
     font-size: 28px;
@@ -46,71 +48,6 @@ body {
 }
 
 
-
-/* sliding section */
-
-.mainslide {
-    position: relative;
-    background: url(banner-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 0 50px;
-}
-
-.mainslide-content {
-    max-width: 600px;
-}
-
-.mainslide-content h1 {
-    font-size: 60px;
-    font-weight: 300;
-    color: #222;
-}
-
-.mainslide-content h2 {
-    font-size: 70px;
-    font-weight: 700;
-    margin: 10px 0;
-    color: #fff;
-}
-
-.mainslide-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 20px 0;
-    max-width: 500px;
-    color: white;
-}
-
-.btn {
-    display: inline-block;
-    background: #222;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.slider-arrows {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-}
-
-.arrow {
-    background: #fff;
-    color: #222;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 20px;
-    align-items: center;
-}
 
 /* about us section */
 
@@ -147,6 +84,16 @@ body {
 .about-content a {
     margin-left: 180px;
     margin-top: 210px;
+}
+
+.buttons {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Gallery Section */
@@ -216,7 +163,7 @@ body {
 
 
 
-.gallery .btn{
+.gallery .buttons{
     margin-top: 30px;
     margin-left: 45%;
     margin-bottom: 80px;
@@ -226,14 +173,13 @@ body {
     color: white;
 }
 
-
 /* Service Section */
 
 .services {
     position: relative;
     background: url(services-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     overflow: hidden;
     height: 100vh;
 }
@@ -263,14 +209,14 @@ body {
 
 }
 
-.card img {
+.cards img {
     width:50px;
     height: 50px;
     margin-top: 25px;
 }
 
 
-.card {
+.cards {
     background-color: #fc7537;
     width: 350px;
     height: 255px;
@@ -279,17 +225,41 @@ body {
     text-align: center;
     border: none;
     color: white;
+    position: relative;
     }
 
-.card:hover {
+.cards:hover {
     background-color: white;
     color: #000;
-    height: 450px;
+    height: 320px;
 }
 
+.cards:hover p,
+.cards:hover h3 {
+  color: black;
+}
 
+.hover-buttons {
+  position: absolute;
+  bottom: 80px; /* stays at the bottom of the box */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px); /* hidden below initially */
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  color: white;
+  height: 45px;
+  width:150px;
+  border: none;
+}
 
+.cards:hover .hover-buttons {
+    opacity: 1;
+    background-color: #400606;
+    transform: translateX(-50%) translateY(0); /* slides up into place */
+    cursor: pointer;
 
+}
 
 /* testimonial section */
 
@@ -312,7 +282,7 @@ body {
 
     /* Quote Slider Section */
 
-    .slide {
+    .quoteslide {
         position: relative;
         width: 80%;
         max-width: 1000px;
@@ -329,13 +299,19 @@ body {
       animation: fade 12s infinite;
     }
 
-     .quotes-wrapper {
-      position: relative;
-      border-left: 3px solid #000;
-      border-right: 3px solid #000;
-      padding: 40px;
-      box-sizing: border-box;
+    .quotes-wrapper {
+        position: relative;
+        border-left: 3px solid #000;
+        border-right: 3px solid #000;
+        padding: 40px;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+        width: 100%;
+        border-image: linear-gradient(to left top, black 25%, transparent 25%, transparent 75%, black 55%) ;
+        /* border-image-slice: 1; */
     }
+
+    
 
     .quote:nth-child(1) {
         animation-delay: 0s;
@@ -404,6 +380,14 @@ body {
         25%, 100% { background: #333; }
     }
 
+    .quote span{
+        color: #f75e2c;
+        font-weight: 1000;
+        font-size: 40px; /* increase the size */
+        display: inline-block;
+        /* margin-top: 20px; */
+        
+    }
 
     /* Contact us section */
 
@@ -423,23 +407,58 @@ body {
     .contact-image {
         background: url(img-9.png);
         background-size:cover;
-        height:760px;
+        height:500px;
     }
     
     .contact-img form {
         position: absolute;
     }
 
-    input {
+    .contacts input {
         margin-left: 70px;
         width: 600px; 
-        border-radius: 25px; 
-        height: 40px;
+        border-radius: 30px; 
+        height: 60px;
+        border: none;
+    }
+
+    .contacts textarea {
+        margin-left: 70px;
+        width: 600px; 
+        border-radius: 40px; 
+        height: 110px;
+        border: none;
+    }
+
+    textarea::placeholder {
+        padding-top: 30px;
+        padding-left: 20px;
+        font-size: 22px;
     }
 
     input::placeholder { 
         padding-left:20px;
+        font-size: 20px;
     }
+
+    .contacts .send{
+        align-items: center;
+        width: 150px; 
+        height: 50px;
+        color: white; 
+        background-color: rgb(217, 65, 9);
+        border-radius: 30px;
+        border: none;
+        margin-left: 290px;
+        margin-top: 20px;
+    }
+
+    .send:hover {
+        cursor: pointer;
+    }
+    
+
+
    
     .footer{
         display: grid;
@@ -456,18 +475,40 @@ body {
         line-height: 1.5;
     }
 
+    .about-footer h2 {
+        margin-top: 50px;
+
+    }
     .menu-footer ul {
         list-style-type: none;
         padding: 0;  
         margin: 0;  
+        line-height: 1.5;
+    }
+
+    .menu-footer ul a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu-footer ul li a:hover {
+        color: #f75e2c;
     }
 
     .useful-link ul {
         list-style-type: none;
         padding: 0;  
-        margin: 0;  
+        margin: 0; 
+        line-height: 1.5;
+    }
+
+    .contact-footer p:hover {
+        color: #f75e2c;
 
     }
+
+
+    /* end footer */
 
     .endfooter p {
         text-align: center;
@@ -480,4 +521,5 @@ body {
 
 
     
+
 

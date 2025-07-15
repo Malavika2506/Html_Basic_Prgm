@@ -1,58 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand Coffee</title>
+    <link rel="icon" type="image/png" href="coffee-shop-logo.png">
     <link rel="stylesheet" href="coffeeshop.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      referrerpolicy="no-referrer"/>
+    
+    <!-- Bootstrap Linking -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- bootstrap linking -->
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">GrandCoffee</div>
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-      </ul>
+</head>
+<body>
+
+<!-- Navbar Design -->
+    <nav class="nav-bar" id="home">
+        <div class="logo">GrandCoffee</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        </ul>
     </nav>
 
-    <!-- sliding content -->
+<!-- Home Carousel Design -->
 
-    <div class="mainslide">
-      <div class="mainslide-content">
-        <h1>Outstanding</h1>
-        <h2>Coffee Shop</h2>
-        <p>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour.
-        </p>
-        <a href="#" class="btn">Learn More</a>
-      </div>
-      <div class="slider-arrows">
-        <button class="arrow">&#10094;</button>
-        <button class="arrow">&#10095;</button>
-      </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" 
+style=" 
+background:url(banner-bg.png);
+background-repeat: no-repeat;
+background-size: cover;
+height: 80vh;
+width:100%;"
+>
+  <div class="carousel-inner" style="margin-left: 250px;">
+    <div class="carousel-item active" style="margin-top: 100px;">
+        <h1 style="font-size: 60px;font-weight: 300;color: #222;">Outstanding</h1>
+        <h2 style="  font-size: 70px;font-weight: 700;margin: 10px 0;color: #fff;">Coffee Shop</h2>
+        <p style="font-size: 18px;line-height: 1.6;margin: 20px 0;max-width: 500px;color: white;">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+        </p>    
+        <a href="#" class="buttons" style="display: inline-block;background: #222;color: #fff;padding: 15px 20px;text-decoration: none;text-transform: uppercase;font-weight: bold;">Learn More</a>
     </div>
+    <div class="carousel-item" style="margin-top: 100px;">
+        <h1 style="font-size: 60px;font-weight: 300;color: #222;">Outstanding</h1>
+        <h2 style="  font-size: 70px;font-weight: 700;margin: 10px 0;color: #fff;">Coffee Shop</h2>
+        <p style="font-size: 18px;line-height: 1.6;margin: 20px 0;max-width: 500px;color: white;">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+        </p> 
+        <a href="#" class="buttons" style="display: inline-block;background: #222;color: #fff;padding: 15px 20px;text-decoration: none;text-transform: uppercase;font-weight: bold;">Learn More</a>
 
-    <!-- About us section -->
-    <div class="about">
+    </div>
+    <div class="carousel-item" style="margin-top: 100px;">
+        <h1 style="font-size: 60px;font-weight: 300;color: #222;">Outstanding</h1>
+        <h2 style="  font-size: 70px;font-weight: 700;margin: 10px 0;color: #fff;">Coffee Shop</h2>
+        <p style="font-size: 18px;line-height: 1.6;margin: 20px 0;max-width: 500px;color: white;">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+        </p>
+        <a href="#" class="buttons" style="display: inline-block;background: #222;color: #fff;padding: 15px 20px;text-decoration: none;text-transform: uppercase;font-weight: bold;">Learn More</a>
+    </div>
+  </div>
+  <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide="prev"
+        style="margin-top: 500px; margin-left: 600px;"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-slide="next" style="margin-top: 500px; margin-right: 600px;"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+<!-- About us section -->
+    <div class="about" id="about">
       <div class="about-content">
         <h2>ABOUT US</h2>
         <p>
@@ -61,15 +113,16 @@
           typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text.Lorem Ipsum is simply
         </p>
-        <a href="#" class="btn">Read More</a>
+        <a href="#" class="buttons">Read More</a>
       </div>
       <div class="about-image">
         <img src="about-img.png" />
       </div>
     </div>
 
-    <!-- Gallery section -->
-    <div class="gallery">
+
+<!-- Gallery section -->
+    <div class="gallery" id="gallery">
       <h2>Our Gallery</h2>
       <p>
         Lorem Ipsum is simply dummy text of printing typesetting ststry lorem
@@ -134,48 +187,46 @@
           </div>
         </div>
       </div>
-      <a href="#" class="btn">See More</a>
+      <a href="#" class="buttons">See More</a>
     </div>
 
-    <!-- Service Section -->
+ <!-- Service Section -->
 
-    <div class="services">
+    <div class="services" id="service">
       <h2>Services</h2>
       <p>Typesetting industry lorem Ipsum is simply dummy text of the</p>
       <div class="services-card">
-        <div class="card">
+        <div class="cards">
           <img src="icon2.png" />
           <h3>Original Coffee</h3>
-          <p style="color: white;">
+          <p>
             Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
           </p>
-          <button class="hover-button">Read More</button>
+          <button class="hover-buttons">Read More</button>
         </div>
 
-        <div class="card">
+        <div class="cards">
           <img src="icon2.png" />
           <h3>20 Coffee Flavours</h3>
-          <p style="color: white;">
+          <p>
             Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
           </p>
-          <button class="hover-button">Read More</button>
+          <button class="hover-buttons">Read More</button>
         </div>
 
-        <div class="card">
+        <div class="cards">
           <img src="icon3.png" />
           <h3>Pleasant Abient</h3>
-          <p style="color: white;">
+          <p>
             Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
           </p>
-          <button class="hover-button">Read More</button>
+          <button class="hover-buttons">Read More</button>
         </div>
       </div>
     </div>
 
 
-
-
-    <!-- Testimonial Section -->
+   <!-- Testimonial Section -->
     <div class="testimonial">
       <h1>Testimonial</h1>
       <p>
@@ -186,7 +237,7 @@
 
     <!-- Quote Slider Section -->
 
-    <div class="slide">
+    <div class="quoteslide">
       <div class="quotes-wrapper">
         <div class="quote">
           <h2>MONILA</h2>
@@ -240,12 +291,12 @@
 
     <!-- Contact us Section -->
 
-    <div class="contact">
+    <div class="contact" id="contact">
       <h2>Contact Us</h2>
     </div>
     <div class="contacts">
       <div class="contact-image">
-        <form>
+        <form style="margin-top: 50px;">
           <label for="name">
             <input type="text" placeholder="Name" id="name" /><br /><br />
           </label>
@@ -259,15 +310,28 @@
               id="phno"
             /><br /><br />
           </label>
-          <label for="message">
-            <input type="text" placeholder="Message" id="message" />
-          </label>
+            <textarea placeholder="Message"></textarea>
         </form>
+        <button class="send" style="margin-bottom: 10px;">SEND</button>
       </div>
-      <div>Maps</div>
+
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.180569192316!2d76.27308527472716!3d10.79446098936143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8555e95769adf%3A0x296a14d0c52b30b5!2sCafe!5e0!3m2!1sen!2sin!4v1580213562185"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"></iframe>
+              
+      </div>
     </div>
 
+
+
     <!-- Footer Section -->
+
+
     <div class="footer">
       <div class="about-footer">
         <h2>About</h2>
@@ -282,11 +346,11 @@
       <div class="menu-footer">
         <h2>Menu</h2>
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Gallery</li>
-          <li>Services</li>
-          <li>Contact Us</li>
+          <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
       <div class="useful-link">
@@ -301,13 +365,17 @@
       </div>
       <div class="contact-footer">
         <h2>Contact Us</h2>
-        <p>Address : Loram Ipusm</p>
-        <p>Call : +01 1234567890</p>
-        <p>Email : demo@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Address : Loram Ipusm</p>
+        <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Call : +01 1234567890</p>
+        <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;Email : demo@gmail.com</p>
       </div>
     </div>
+
+
+    <!-- end footer -->
     <div class="endfooter">
       <p>2020 All Rights Reserved. Design by Free html Templates</p>
     </div>
-  </body>
+
+</body>
 </html>
