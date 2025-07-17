@@ -380,15 +380,18 @@ body {
         25%, 100% { background: #333; }
     }
 
-    .quote span{
+    .carousel-item span{
         color: #f75e2c;
         font-weight: 1000;
         font-size: 40px; /* increase the size */
         display: inline-block;
         /* margin-top: 20px; */
-        
+    }
+    .carousel-item legend {
+        color: #f75e2c;
     }
 
+   
     /* Contact us section */
 
     .contact h2 {
